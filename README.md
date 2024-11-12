@@ -1,8 +1,9 @@
-Login App
+## Login App
 
 A simple iOS login and registration application built using Swift and UIKit. This project provides a modern user interface for logging in and signing up, and demonstrates usage of features like UITextField customization, Auto Layout, and UIView animations. The app uses a series of well-constructed view controllers for different screens, such as login, registration, and onboarding.
 
-Features
+
+## Features
 
 Login and Registration Screens: Allows users to register with an email and password, and log in using the same credentials.
 
@@ -18,21 +19,8 @@ Dynamic Animations: Animated elements, such as button clicks and transitions.
 
 High Scores Feature: Displays player high scores in the game section.
 
-Screenshots
 
-Onboarding Screen
-
-Login Screen
-
-Register Screen
-
-
-
-
-
-
-
-Technologies Used
+## Technologies Used
 
 Swift: The programming language used for building the application.
 
@@ -40,7 +28,8 @@ UIKit: The framework used for designing the user interface.
 
 Auto Layout: Used for making the user interface adaptive to different screen sizes.
 
-Requirements
+
+## Requirements
 
 iOS 14.0+
 
@@ -48,7 +37,8 @@ Xcode 14.0+
 
 Swift 5.0+
 
-Installation
+
+## Installation
 
 Clone the Repository
 
@@ -62,7 +52,8 @@ Run the Application
 
 Select a target simulator and press the Run button or Cmd + R.
 
-How to Use
+
+## How to Use
 
 Onboarding
 
@@ -76,7 +67,7 @@ Register Screen
 
 Register as a new user with your name, email, and password.
 
-Customization
+## Customization
 
 You can modify the text fields, buttons, and other UI elements by changing their properties within the LoginViewController.swift or RegisterViewController.swift files.
 
@@ -96,16 +87,16 @@ Push to the branch (git push origin feature-branch).
 
 Open a Pull Request.
 
-License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Contact
+## Contact
 
 If you have any questions or suggestions regarding the project, feel free to reach out to:
 
 Name: Shailesh Srigiri
 
-Email: muralirk314@gmail.com
+Email: shaileshsrigiri@gmail.com
 
 Thank you for checking out this project! If you like it, please give it a star on GitHub. Happy coding!
