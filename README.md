@@ -3,6 +3,10 @@
 A simple iOS login and registration application built using Swift and UIKit. This project provides a modern user interface for logging in and signing up, and demonstrates usage of features like UITextField customization, Auto Layout, and UIView animations. The app uses a series of well-constructed view controllers for different screens, such as login, registration, and onboarding.
 
 
+https://github.com/user-attachments/assets/ef9cbca6-430c-4262-b3d7-e6e655019f09
+
+
+
 ## Features
 
 **Login and Registration Screens:** Allows users to register with an email and password, and log in using the same credentials.
