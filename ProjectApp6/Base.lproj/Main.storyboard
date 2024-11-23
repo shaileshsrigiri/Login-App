@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VKo-nC-rSp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pcT-Yo-xHt">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -284,44 +284,15 @@ You've been missed</string>
             </objects>
             <point key="canvasLocation" x="-1150" y="-856"/>
         </scene>
-        <!--View Controller-->
+        <!--Searching View Controller-->
         <scene sceneID="qOF-uZ-AD6">
             <objects>
-                <viewController id="Nnl-Hs-cb6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchingViewController" id="Nnl-Hs-cb6" customClass="SearchingViewController" customModule="ProjectApp6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cnn-xQ-mqB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4K-Ms-r8U">
-                                <rect key="frame" x="20" y="123" width="353" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="WFf-N1-kpc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3su-Mi-TtU">
-                                <rect key="frame" x="20" y="193" width="353" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hV5-ia-Sf8"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FaX-Yn-kDJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="3su-Mi-TtU" firstAttribute="leading" secondItem="FaX-Yn-kDJ" secondAttribute="leading" constant="20" id="3jR-An-HNw"/>
-                            <constraint firstItem="FaX-Yn-kDJ" firstAttribute="trailing" secondItem="3su-Mi-TtU" secondAttribute="trailing" constant="20" id="CIo-l4-cOk"/>
-                            <constraint firstItem="h4K-Ms-r8U" firstAttribute="leading" secondItem="FaX-Yn-kDJ" secondAttribute="leading" constant="20" id="PXt-VC-NJX"/>
-                            <constraint firstItem="h4K-Ms-r8U" firstAttribute="centerX" secondItem="cnn-xQ-mqB" secondAttribute="centerX" id="Raw-8Y-O4s"/>
-                            <constraint firstItem="h4K-Ms-r8U" firstAttribute="top" secondItem="FaX-Yn-kDJ" secondAttribute="top" constant="20" id="SJD-tg-LZv"/>
-                            <constraint firstItem="FaX-Yn-kDJ" firstAttribute="trailing" secondItem="h4K-Ms-r8U" secondAttribute="trailing" constant="20" id="W2N-nL-bBK"/>
-                            <constraint firstItem="3su-Mi-TtU" firstAttribute="top" secondItem="h4K-Ms-r8U" secondAttribute="bottom" constant="20" id="czI-ql-aGc"/>
-                            <constraint firstItem="3su-Mi-TtU" firstAttribute="centerX" secondItem="cnn-xQ-mqB" secondAttribute="centerX" id="zFf-47-hk4"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UDl-aS-XdP"/>
                 </viewController>
@@ -329,10 +300,10 @@ You've been missed</string>
             </objects>
             <point key="canvasLocation" x="534" y="601"/>
         </scene>
-        <!--View Controller-->
+        <!--Browse View Controller-->
         <scene sceneID="a0H-mQ-Wrz">
             <objects>
-                <viewController id="03f-0O-m8J" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BrowseViewController" id="03f-0O-m8J" customClass="BrowseViewController" customModule="ProjectApp6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mgp-og-kvD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -354,6 +325,7 @@ You've been missed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="AAV-dr-Nkm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mj3-Rm-RwH"/>
                 </viewController>

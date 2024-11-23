@@ -26,7 +26,12 @@ class TrendsTableViewCell: UITableViewCell {
     private func setupCell() {
         // Configure trend button
         trendButton.layer.cornerRadius = 10
-        trendButton.backgroundColor = .black
+        trendButton.backgroundColor = .white
+        trendButton.layer.shadowColor = UIColor.black.cgColor
+        trendButton.layer.shadowOpacity = 0.1
+        trendButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        trendButton.layer.shadowRadius = 4
+        trendButton.layer.masksToBounds = false
         trendButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(trendButton)
 
@@ -51,6 +56,7 @@ class TrendsTableViewCell: UITableViewCell {
 
         // Configure forward arrow image view
         forwardArrowImageView.contentMode = .scaleAspectFit
+        forwardArrowImageView.tintColor = .lightGray
         forwardArrowImageView.translatesAutoresizingMaskIntoConstraints = false
         trendButton.addSubview(forwardArrowImageView)
 
@@ -70,14 +76,14 @@ class TrendsTableViewCell: UITableViewCell {
 
             // Title Label Constraints
             titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 8),
-            titleLabel.centerYAnchor.constraint(equalTo: iconImageView.centerYAnchor),
             titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: forwardArrowImageView.leadingAnchor, constant: -8),
+            titleLabel.topAnchor.constraint(equalTo: trendButton.topAnchor, constant: 16),
 
             // Description Label Constraints
-            descriptionLabel.leadingAnchor.constraint(equalTo: trendButton.leadingAnchor, constant: 16),
+            descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             descriptionLabel.trailingAnchor.constraint(equalTo: trendButton.trailingAnchor, constant: -16),
-            descriptionLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 8),
-            descriptionLabel.bottomAnchor.constraint(equalTo: trendButton.bottomAnchor, constant: -16),
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
+            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: trendButton.bottomAnchor, constant: -16),
 
             // Forward Arrow Image View Constraints
             forwardArrowImageView.trailingAnchor.constraint(equalTo: trendButton.trailingAnchor, constant: -16),

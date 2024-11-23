@@ -25,7 +25,12 @@ class AppsTableViewCell: UITableViewCell {
     private func setupCell() {
         // Configure app button
         appButton.layer.cornerRadius = 10
-        appButton.backgroundColor = .black
+        appButton.backgroundColor = .white
+        appButton.layer.shadowColor = UIColor.black.cgColor
+        appButton.layer.shadowOpacity = 0.1
+        appButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        appButton.layer.shadowRadius = 4
+        appButton.layer.masksToBounds = false
         appButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(appButton)
 
@@ -38,7 +43,7 @@ class AppsTableViewCell: UITableViewCell {
 
         // Configure title label
         titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        titleLabel.textColor = .white
+        titleLabel.textColor = .black
         titleLabel.numberOfLines = 1
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         appButton.addSubview(titleLabel)

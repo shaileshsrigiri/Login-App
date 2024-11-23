@@ -26,7 +26,12 @@ class HighlightsTableViewCell: UITableViewCell {
     private func setupCell() {
         // Configure highlight button
         highlightButton.layer.cornerRadius = 10
-        highlightButton.backgroundColor = .black
+        highlightButton.backgroundColor = .white
+        highlightButton.layer.shadowColor = UIColor.black.cgColor
+        highlightButton.layer.shadowOpacity = 0.1
+        highlightButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        highlightButton.layer.shadowRadius = 4
+        highlightButton.layer.masksToBounds = false
         highlightButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(highlightButton)
 
@@ -51,6 +56,7 @@ class HighlightsTableViewCell: UITableViewCell {
 
         // Configure forward arrow image view
         forwardArrowImageView.contentMode = .scaleAspectFit
+        forwardArrowImageView.tintColor = .lightGray
         forwardArrowImageView.translatesAutoresizingMaskIntoConstraints = false
         highlightButton.addSubview(forwardArrowImageView)
 
@@ -70,12 +76,12 @@ class HighlightsTableViewCell: UITableViewCell {
 
             // Title Label Constraints
             titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 8),
-            titleLabel.topAnchor.constraint(equalTo: highlightButton.topAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: forwardArrowImageView.leadingAnchor, constant: -8),
+            titleLabel.topAnchor.constraint(equalTo: highlightButton.topAnchor, constant: 16),
 
             // Description Label Constraints
             descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            descriptionLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            descriptionLabel.trailingAnchor.constraint(equalTo: highlightButton.trailingAnchor, constant: -16),
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: highlightButton.bottomAnchor, constant: -16),
 
@@ -87,3 +93,4 @@ class HighlightsTableViewCell: UITableViewCell {
         ])
     }
 }
+
