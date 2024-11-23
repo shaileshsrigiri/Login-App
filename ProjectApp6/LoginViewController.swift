@@ -64,4 +64,30 @@ class LoginViewController: UIViewController {
         
         button.setTitleColor(.white, for: .normal)
     }
+    
+    @IBAction func signInButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let tabbarviewcontroller = storyboard.instantiateViewController(withIdentifier: "tabbar") as? UITabBarController {
+            tabbarviewcontroller.modalPresentationStyle = .fullScreen
+            present(tabbarviewcontroller, animated: true, completion: nil)
+        }
+         
+    }
+    
+    @IBAction func makeNewAccountButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let registerviewcontroller = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController {
+            navigationController?.pushViewController(registerviewcontroller, animated: true)
+        }
+        
+    }
+    
+    @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let forgotpasswordviewcontroller = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as? ForgotPasswordViewController {
+            navigationController?.pushViewController(forgotpasswordviewcontroller, animated: true)
+        }
+    }
+    
+
 }

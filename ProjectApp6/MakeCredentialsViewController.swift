@@ -71,4 +71,13 @@ class MakeCredentialsViewController: UIViewController {
         
         button.setTitleColor(.white, for: .normal)
     }
+    
+    
+    @IBAction func toUpdatePasswordButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let passwordUpdatedViewController = storyboard.instantiateViewController(withIdentifier: "PasswordUpdatedViewController") as? PasswordUpdatedViewController {
+            navigationController?.pushViewController(passwordUpdatedViewController, animated: true)
+        
+        }
+    }
 }

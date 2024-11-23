@@ -62,4 +62,13 @@ class PasswordUpdatedViewController: UIViewController {
         
         button.setTitleColor(.white, for: .normal)
     }
+    
+    
+    @IBAction func toLoginPageAgainButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+            {
+            navigationController?.pushViewController(loginViewController, animated: true)
+        }
+    }
 }

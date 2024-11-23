@@ -71,6 +71,44 @@ class RegisterViewController: UIViewController {
         
         button.setTitleColor(.white, for: .normal)
     }
+    
+    @IBAction func goBackToLoginPageButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+            navigationController?.pushViewController(loginViewController, animated: true)
+        }
+    }
+    
+    @IBAction func signUpButtonTapped(_ sender: UIButton) {
+         //Create instances of each view controller
+//        let favoritesVC = FavoritesTableViewController()
+//        favoritesVC.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star.fill"), tag: 0)
+//        
+//        let recentsVC = SecondViewController()
+//        recentsVC.tabBarItem = UITabBarItem(title: "Recents", image: UIImage(systemName: "clock.fill"), tag: 1)
+//        
+//        let contactsVC = ThirdViewController()
+//        contactsVC.tabBarItem = UITabBarItem(title: "contacts", image: UIImage(systemName: "person.circle.fill"), tag: 2)
+//        
+//        let keypadVC = FourthViewController()
+//        keypadVC.tabBarItem = UITabBarItem(title: "Keypad", image: UIImage(systemName: "circle.grid.3x3.fill"), tag: 3)
+//        
+//        let voicemailVC = FifthViewController()
+//        voicemailVC.tabBarItem = UITabBarItem(title: "Voicemail", image: UIImage(systemName: "recordingtape"), tag: 4)
+//        
+//        
+//        // Instantiate Tab Bar Controller and add view controllers
+//        let tabBarController = UITabBarController()
+//        tabBarController.viewControllers = [favoritesVC, recentsVC, contactsVC, keypadVC, voicemailVC]
+//        tabBarController.selectedIndex = 0 // Set default tab to Home
+//        
+//        // Present the tab bar controller
+//        tabBarController.modalPresentationStyle = .fullScreen
+//        present(tabBarController, animated: true, completion: nil)
+    }
+    
+  
+    
 }
 
 

@@ -67,4 +67,13 @@ class ForgotPasswordViewController: UIViewController {
         
         button.setTitleColor(.white, for: .normal)
     }
+    
+    
+    @IBAction func toMakeCredentialsButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let makecreditalsViewController = storyboard.instantiateViewController(withIdentifier: "MakeCredentialsViewController") as? MakeCredentialsViewController {
+            navigationController?.pushViewController(makecreditalsViewController, animated: true)
+            
+        }
+    }
 }
