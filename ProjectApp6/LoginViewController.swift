@@ -18,8 +18,9 @@ class LoginViewController: UIViewController {
         
         styleTextField(emailTextField, placeholderText: "Email", iconName: "envelope")
         styleTextField(passwordTextField, placeholderText: "Password", iconName: "lock")
-        
         styleButton(signInButton)
+        
+     
     }
     
     func styleTextField(_ textField: UITextField, placeholderText: String, iconName: String) {
@@ -65,11 +66,53 @@ class LoginViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
     }
     
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegex = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+        return email.range(of: emailRegex, options: .regularExpression) != nil
+    }
+    
+    func validateFields() -> Bool {
+        guard let email = emailTextField.text, !email.isEmpty else {
+            showAlert(message: "Email is required.")
+            return false
+        }
+        
+        guard let password = passwordTextField.text, !password.isEmpty else {
+            showAlert(message: "Password is required.")
+            return false
+        }
+        
+        guard isValidEmail(email) else {
+            showAlert(message: "Invalid email address.")
+            return false
+        }
+        
+        guard password.count >= 6 else {
+            showAlert(message: "Password must be at least 6 characters long.")
+            return false
+        }
+        
+        return true
+    }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func signInButtonTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let tabbarviewcontroller = storyboard.instantiateViewController(withIdentifier: "tabbar") as? UITabBarController {
-            tabbarviewcontroller.modalPresentationStyle = .fullScreen
-            present(tabbarviewcontroller, animated: true, completion: nil)
+        if validateFields() {
+            // Navigate only if validation passes
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let tabBarViewController = storyboard.instantiateViewController(withIdentifier: "tabbar") as? UITabBarController {
+                tabBarViewController.modalPresentationStyle = .fullScreen
+                present(tabBarViewController, animated: true, completion: nil)
+            }
+        } else {
+            print("Validation failed. Sign-in action aborted.")
         }
          
     }
@@ -91,3 +134,7 @@ class LoginViewController: UIViewController {
     
 
 }
+
+
+
+

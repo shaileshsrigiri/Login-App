@@ -6,7 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		418B34462CF523800094CE20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41D7D1322CE2B5D30092D132 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41D7D1392CE2B5D30092D132;
+			remoteInfo = ProjectApp6;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		418B34422CF523800094CE20 /* ProjectApp6Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectApp6Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D7D13A2CE2B5D30092D132 /* ProjectApp6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectApp6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -21,6 +32,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		418B34432CF523800094CE20 /* ProjectApp6Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ProjectApp6Tests;
+			sourceTree = "<group>";
+		};
 		41D7D13C2CE2B5D30092D132 /* ProjectApp6 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -32,6 +48,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		418B343F2CF523800094CE20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41D7D1372CE2B5D30092D132 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				41D7D13C2CE2B5D30092D132 /* ProjectApp6 */,
+				418B34432CF523800094CE20 /* ProjectApp6Tests */,
 				41D7D13B2CE2B5D30092D132 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				41D7D13A2CE2B5D30092D132 /* ProjectApp6.app */,
+				418B34422CF523800094CE20 /* ProjectApp6Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +86,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		418B34412CF523800094CE20 /* ProjectApp6Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 418B344A2CF523800094CE20 /* Build configuration list for PBXNativeTarget "ProjectApp6Tests" */;
+			buildPhases = (
+				418B343E2CF523800094CE20 /* Sources */,
+				418B343F2CF523800094CE20 /* Frameworks */,
+				418B34402CF523800094CE20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				418B34472CF523800094CE20 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				418B34432CF523800094CE20 /* ProjectApp6Tests */,
+			);
+			name = ProjectApp6Tests;
+			packageProductDependencies = (
+			);
+			productName = ProjectApp6Tests;
+			productReference = 418B34422CF523800094CE20 /* ProjectApp6Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		41D7D1392CE2B5D30092D132 /* ProjectApp6 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41D7D14D2CE2B5D50092D132 /* Build configuration list for PBXNativeTarget "ProjectApp6" */;
@@ -93,6 +141,10 @@
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
+					418B34412CF523800094CE20 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 41D7D1392CE2B5D30092D132;
+					};
 					41D7D1392CE2B5D30092D132 = {
 						CreatedOnToolsVersion = 16.1;
 					};
@@ -113,11 +165,19 @@
 			projectRoot = "";
 			targets = (
 				41D7D1392CE2B5D30092D132 /* ProjectApp6 */,
+				418B34412CF523800094CE20 /* ProjectApp6Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		418B34402CF523800094CE20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41D7D1382CE2B5D30092D132 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,6 +188,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		418B343E2CF523800094CE20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41D7D1362CE2B5D30092D132 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,7 +204,49 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		418B34472CF523800094CE20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41D7D1392CE2B5D30092D132 /* ProjectApp6 */;
+			targetProxy = 418B34462CF523800094CE20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		418B34482CF523800094CE20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShaileshSrigiri.ProjectApp6Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectApp6.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProjectApp6";
+			};
+			name = Debug;
+		};
+		418B34492CF523800094CE20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShaileshSrigiri.ProjectApp6Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectApp6.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProjectApp6";
+			};
+			name = Release;
+		};
 		41D7D14E2CE2B5D50092D132 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -314,6 +423,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		418B344A2CF523800094CE20 /* Build configuration list for PBXNativeTarget "ProjectApp6Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				418B34482CF523800094CE20 /* Debug */,
+				418B34492CF523800094CE20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		41D7D1352CE2B5D30092D132 /* Build configuration list for PBXProject "ProjectApp6" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
